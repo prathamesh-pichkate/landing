@@ -3,11 +3,11 @@ import EventCard from "./EventCard";
 const Events = () => {
   const upcomingEvents = [
     {
-      title: "Advanced Shell Scripting Workshop",
+      title: "Linux Command Line Mastery",
       date: "March 15, 2024",
       time: "6:00 PM - 8:00 PM",
-      type: "workshop" as const,
-      description: "Learn advanced bash scripting techniques, automation, and system administration tasks."
+      type: "event" as const,
+      description: "Deep dive into essential Linux commands and terminal productivity techniques."
     },
     {
       title: "Open Source Contribution Meetup", 
@@ -17,20 +17,20 @@ const Events = () => {
       description: "Find your first open source project and make your first contribution with guidance from experienced contributors."
     },
     {
-      title: "Linux Security Fundamentals",
+      title: "System Administration Fundamentals",
       date: "March 29, 2024", 
       time: "6:00 PM - 8:30 PM",
-      type: "workshop" as const,
-      description: "Hands-on workshop covering Linux security best practices, firewalls, and system hardening."
+      type: "event" as const,
+      description: "Learn essential system administration tasks including user management, file permissions, and process monitoring."
     }
   ];
 
   const pastEvents = [
     {
-      title: "Docker Containerization Workshop",
+      title: "Docker Containerization Session",
       date: "March 8, 2024",
       time: "6:00 PM - 8:00 PM", 
-      type: "workshop" as const,
+      type: "event" as const,
       description: "Introduction to Docker, containerization concepts, and building your first containers.",
       attendees: 32
     },
@@ -43,10 +43,10 @@ const Events = () => {
       attendees: 45
     },
     {
-      title: "Linux Command Line Bootcamp",
+      title: "Linux Basics Bootcamp",
       date: "February 23, 2024",
       time: "6:00 PM - 8:30 PM",
-      type: "workshop" as const,
+      type: "event" as const,
       description: "Intensive hands-on session covering essential Linux commands and terminal productivity.",
       attendees: 38
     }
@@ -57,7 +57,7 @@ const Events = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-primary">Events</span> & Workshops
+            <span className="text-primary">Events</span> & Meetups
           </h2>
           <p className="text-muted-foreground text-lg">
             Join us every week for hands-on learning and community building

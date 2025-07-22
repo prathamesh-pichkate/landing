@@ -4,7 +4,7 @@ const About = () => {
   const features = [
     {
       icon: "🐧",
-      title: "Weekly Workshops",
+      title: "Weekly Events",
       description: "Hands-on sessions covering Linux fundamentals, system administration, and advanced topics."
     },
     {
@@ -29,12 +29,12 @@ const About = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            About <span className="text-primary">Linux Club Pune</span>
+            About <span className="text-primary">Linux Club</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             We are a passionate community of developers, system administrators, and Linux enthusiasts 
             dedicated to promoting open source culture and sharing knowledge through regular meetups, 
-            workshops, and collaborative projects.
+            events, and collaborative projects.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ const About = () => {
               <h4 className="text-lg font-semibold mb-3 text-primary">Education & Learning</h4>
               <p className="text-muted-foreground">
                 Provide accessible learning opportunities for Linux and open source technologies 
-                through structured workshops and hands-on experiences.
+                through structured events and hands-on experiences.
               </p>
             </div>
             <div>

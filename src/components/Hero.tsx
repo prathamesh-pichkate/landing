@@ -5,11 +5,11 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-4 pt-20">
       <div className="text-center max-w-4xl mx-auto">
         <div className="mb-6">
-          <span className="text-primary text-sm font-mono">~/linux-club-pune $</span>
+          <span className="text-primary text-sm font-mono">~/linux-club $</span>
         </div>
         
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          <span className="text-primary">Linux</span> Club Pune
+          <span className="text-primary">Linux</span> Club
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
@@ -32,8 +32,8 @@ const Hero = () => {
             <div className="text-muted-foreground">Active Members</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-accent mb-2">25+</div>
-            <div className="text-muted-foreground">Workshops Conducted</div>
+            <div className="text-3xl font-bold text-accent mb-2">20+</div>
+            <div className="text-muted-foreground">Events Conducted</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-primary mb-2">3+</div>

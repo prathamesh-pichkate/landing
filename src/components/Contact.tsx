@@ -30,7 +30,7 @@ const Contact = () => {
                 <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
                   <span className="text-accent-foreground text-sm">2</span>
                 </div>
-                <span>Attend weekly meetups and workshops</span>
+                <span>Attend weekly meetups and events</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">

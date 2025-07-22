@@ -8,10 +8,10 @@ const Footer = () => {
               <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-sm">$</span>
               </div>
-              <span className="text-xl font-bold">Linux Club Pune</span>
+              <span className="text-xl font-bold">Linux Club</span>
             </div>
             <p className="text-muted-foreground">
-              Building the future of open source, one workshop at a time.
+              Building the future of open source, one event at a time.
             </p>
           </div>
           
@@ -20,7 +20,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
               <li><a href="#events" className="text-muted-foreground hover:text-primary transition-colors">Events</a></li>
-              <li><a href="#workshops" className="text-muted-foreground hover:text-primary transition-colors">Workshops</a></li>
+              <li><a href="#team" className="text-muted-foreground hover:text-primary transition-colors">Team</a></li>
               <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -38,7 +38,7 @@ const Footer = () => {
         
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground">
-            © 2024 Linux Club Pune. Made with <span className="text-red-500">❤️</span> and open source.
+            © 2024 Linux Club. Made with <span className="text-red-500">❤️</span> and open source.
           </p>
         </div>
       </div>

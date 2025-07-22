@@ -8,7 +8,7 @@ const Header = () => {
           <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">$</span>
           </div>
-          <span className="text-xl font-bold">Linux Club Pune</span>
+          <span className="text-xl font-bold">Linux Club</span>
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
@@ -18,8 +18,8 @@ const Header = () => {
           <a href="#events" className="text-muted-foreground hover:text-primary transition-colors">
             Events
           </a>
-          <a href="#workshops" className="text-muted-foreground hover:text-primary transition-colors">
-            Workshops
+          <a href="#team" className="text-muted-foreground hover:text-primary transition-colors">
+            Team
           </a>
           <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
             Contact
