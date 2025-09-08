@@ -70,7 +70,7 @@ const Contact = () => {
               Weekly Meetups
             </h3>
             <p className="text-muted-foreground mb-4">
-              Every <span className="text-primary font-semibold">Saturday at 6:00 PM</span>
+              Every <span className="text-primary font-semibold">Thursday at 2:00 PM</span>
             </p>
             <p className="text-sm text-muted-foreground">
               Location details shared in our Whatsapp group

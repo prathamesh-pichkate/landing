@@ -63,7 +63,7 @@ const Team = () => {
     },
     {
       name: "Nikhil Gawade",
-      role: "Video Content Creator",
+      role: "Content Creator",
       bio: "Creates engaging video content to showcase our events and workshops.",
       avatar: "🎥"
     },
