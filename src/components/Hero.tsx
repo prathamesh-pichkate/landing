@@ -70,10 +70,10 @@ const Hero = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <Button size="lg" className="bg-primary hover:bg-primary/80">
-            Join Our Community
+            <a href="https://chat.whatsapp.com/Kh2Ek2wW45DA7yMWCf0HAN">Join Our Community</a>
           </Button>
           <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            View Events
+            <a href="linuxclub.live/events">View Events</a>
           </Button>
         </div>
         

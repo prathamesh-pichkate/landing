@@ -24,7 +24,7 @@ const Contact = () => {
                 <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                   <span className="text-primary-foreground text-sm">1</span>
                 </div>
-                <span>Join our Telegram group for daily updates</span>
+                <span>Join our Whatsapp group for daily updates</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
@@ -50,7 +50,7 @@ const Contact = () => {
                 <h4 className="font-semibold mb-2">Social Media</h4>
                 <div className="space-y-2">
                   <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                    📱 Telegram Group
+                    <a href="https://chat.whatsapp.com/Kh2Ek2wW45DA7yMWCf0HAN">📱 Whatsapp Group</a>
                   </Button>
                   <Button variant="outline" className="w-full justify-start border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                     💻 GitHub Organization
@@ -73,7 +73,7 @@ const Contact = () => {
               Every <span className="text-primary font-semibold">Saturday at 6:00 PM</span>
             </p>
             <p className="text-sm text-muted-foreground">
-              Location details shared in our Telegram group
+              Location details shared in our Whatsapp group
             </p>
           </div>
         </div>

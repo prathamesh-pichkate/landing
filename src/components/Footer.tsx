@@ -5,9 +5,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">$</span>
-              </div>
+              <div className="w-8 h-8 rounded-sm flex items-center justify-center">
+                <img src="/1714018256921.jpeg" alt="Logo" className="w-8 h-8 object-contain" />
+               </div>
               <span className="text-xl font-bold">Linux Club</span>
             </div>
             <p className="text-muted-foreground">
@@ -28,17 +28,17 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-accent">Community</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-accent transition-colors">Join Telegram</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-accent transition-colors">GitHub</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-accent transition-colors">Twitter</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-accent transition-colors">Discord</a></li>
+              <li><a href="https://chat.whatsapp.com/Kh2Ek2wW45DA7yMWCf0HAN" className="text-muted-foreground hover:text-accent transition-colors">Join Whatsapp</a></li>
+              <li><a href="https://github.com/linux-club-dev" className="text-muted-foreground hover:text-accent transition-colors">GitHub</a></li>
+              <li><a href="https://x.com/i/communities/1607126742795448320" className="text-muted-foreground hover:text-accent transition-colors">Twitter</a></li>
+              <li><a href="https://www.linkedin.com/company/thelinux-club" className="text-muted-foreground hover:text-accent transition-colors">Linkedin</a></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground">
-            © 2024 Linux Club. Made with <span className="text-red-500">❤️</span> and open source.
+            © 2025 Linux Club. Made with <span className="text-red-500">❤️</span> and open source.
           </p>
         </div>
       </div>

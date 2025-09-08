@@ -32,7 +32,7 @@ const About = () => {
             About <span className="text-primary">Linux Club</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            We are a passionate community of developers, system administrators, and Linux enthusiasts 
+            We are a passionate community of students, developers, and Linux enthusiasts 
             dedicated to promoting open source culture and sharing knowledge through regular meetups, 
             events, and collaborative projects.
           </p>

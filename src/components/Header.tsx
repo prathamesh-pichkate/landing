@@ -5,8 +5,8 @@ const Header = () => {
     <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">$</span>
+          <div className="w-8 h-8 rounded-sm flex items-center justify-center">
+            <img src="/1714018256921.jpeg" alt="Logo" className="w-8 h-8 object-contain" />
           </div>
           <span className="text-xl font-bold">Linux Club</span>
         </div>
@@ -27,7 +27,7 @@ const Header = () => {
         </nav>
 
         <Button className="bg-primary hover:bg-primary/80">
-          Join Club
+          Join Us
         </Button>
       </div>
     </header>
