@@ -1,9 +1,36 @@
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const eventImages = [
+    "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=150&h=100&fit=crop&crop=center",
+    "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=150&h=100&fit=crop&crop=center",
+    "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=150&h=100&fit=crop&crop=center",
+    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=150&h=100&fit=crop&crop=center",
+    "https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=150&h=100&fit=crop&crop=center",
+    "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=150&h=100&fit=crop&crop=center",
+  ];
+
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-20">
-      <div className="text-center max-w-4xl mx-auto">
+    <section className="min-h-screen flex items-center justify-center px-4 pt-20 relative overflow-hidden">
+      {/* Scrolling Background */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="flex animate-[scroll_20s_linear_infinite] space-x-4">
+          {[...eventImages, ...eventImages, ...eventImages].map((image, index) => (
+            <div key={index} className="flex-shrink-0 w-32 h-20 rounded-lg overflow-hidden">
+              <img src={image} alt="" className="w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
+        <div className="flex animate-[scroll-reverse_25s_linear_infinite] space-x-4 mt-4">
+          {[...eventImages.reverse(), ...eventImages, ...eventImages].map((image, index) => (
+            <div key={index} className="flex-shrink-0 w-32 h-20 rounded-lg overflow-hidden">
+              <img src={image} alt="" className="w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <div className="text-center max-w-4xl mx-auto relative z-10">
         <div className="mb-6">
           <span className="text-primary text-sm font-mono">~/linux-club $</span>
         </div>
