@@ -13,17 +13,17 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 pt-20 relative overflow-hidden">
       {/* Scrolling Background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="flex animate-[scroll_20s_linear_infinite] space-x-4">
+      <div className="absolute inset-0 opacity-30">
+        <div className="flex animate-[scroll_20s_linear_infinite] space-x-6">
           {[...eventImages, ...eventImages, ...eventImages].map((image, index) => (
-            <div key={index} className="flex-shrink-0 w-32 h-20 rounded-lg overflow-hidden">
+            <div key={index} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg">
               <img src={image} alt="" className="w-full h-full object-cover" />
             </div>
           ))}
         </div>
-        <div className="flex animate-[scroll-reverse_25s_linear_infinite] space-x-4 mt-4">
+        <div className="flex animate-[scroll-reverse_25s_linear_infinite] space-x-6 mt-6">
           {[...eventImages.reverse(), ...eventImages, ...eventImages].map((image, index) => (
-            <div key={index} className="flex-shrink-0 w-32 h-20 rounded-lg overflow-hidden">
+            <div key={index} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg">
               <img src={image} alt="" className="w-full h-full object-cover" />
             </div>
           ))}
