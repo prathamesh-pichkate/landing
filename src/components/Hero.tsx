@@ -73,13 +73,13 @@ const Hero = () => {
             <a href="https://chat.whatsapp.com/Kh2Ek2wW45DA7yMWCf0HAN">Join Our Community</a>
           </Button>
           <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            <a href="linuxclub.live/events">View Events</a>
+            <a href="#Events">View Events</a>
           </Button>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">50+</div>
+            <div className="text-3xl font-bold text-primary mb-2">300+</div>
             <div className="text-muted-foreground">Active Members</div>
           </div>
           <div className="text-center">

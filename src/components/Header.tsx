@@ -27,7 +27,7 @@ const Header = () => {
         </nav>
 
         <Button className="bg-primary hover:bg-primary/80">
-          Join Us
+          <a href="https://chat.whatsapp.com/Kh2Ek2wW45DA7yMWCf0HAN">Join Us</a>
         </Button>
       </div>
     </header>

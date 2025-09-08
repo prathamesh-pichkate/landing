@@ -53,10 +53,10 @@ const Contact = () => {
                     <a href="https://chat.whatsapp.com/Kh2Ek2wW45DA7yMWCf0HAN">📱 Whatsapp Group</a>
                   </Button>
                   <Button variant="outline" className="w-full justify-start border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                    💻 GitHub Organization
+                   <a href="https://github.com/linux-club-dev">💻 GitHub Organization</a>
                   </Button>
                   <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                    🐦 Twitter / X
+                    <a href="https://x.com/i/communities/1607126742795448320">🐦 Twitter / X</a>
                   </Button>
                 </div>
               </div>
