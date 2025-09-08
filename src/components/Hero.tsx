@@ -64,7 +64,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-          A community of passionate developers exploring the world of{" "}
+          A community of passionate students exploring the world of{" "}
           <span className="text-accent">open source</span> through weekly events and workshops
         </p>
         
