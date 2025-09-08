@@ -5,38 +5,56 @@ const Gallery = () => {
     {
       id: 1,
       title: "Linux Installation Workshop",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500&h=300&fit=crop&crop=center",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_747_xvkxfj",
       event: "Weekly Workshop #12"
     },
     {
       id: 2,
       title: "Command Line Bootcamp",
-      image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=500&h=300&fit=crop&crop=center",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_718_jujhsv",
       event: "Weekly Event #8"
     },
     {
       id: 3,
       title: "Open Source Contribution Drive",
-      image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=500&h=300&fit=crop&crop=center",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_996_lmrpuw",
       event: "Special Event"
     },
     {
       id: 4,
-      title: "Kernel Development Session",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop&crop=center",
-      event: "Weekly Workshop #15"
+      title: "Linux Club Meetup",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20250127_161743_knfykh",
+      event: "Monthly Meetup"
     },
     {
       id: 5,
       title: "Network Security Workshop",
-      image: "https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=500&h=300&fit=crop&crop=center",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_904_m4pnxm",
       event: "Weekly Event #10"
     },
     {
       id: 6,
-      title: "Docker & Containers",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=500&h=300&fit=crop&crop=center",
+      title: "Technical Session",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20250127_161737_bd1rgi",
+      event: "Technical Workshop"
+    },
+    {
+      id: 7,
+      title: "Community Discussion",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212557_257_qdqcen",
+      event: "Community Event"
+    },
+    {
+      id: 8,
+      title: "Coding Session",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212557_081_avwpts",
       event: "Weekly Workshop #18"
+    },
+    {
+      id: 9,
+      title: "Project Showcase",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20241001_183944_736_dr0qkv",
+      event: "Special Showcase"
     }
   ];
 
