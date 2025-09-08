@@ -27,40 +27,93 @@ const TeamMember = ({ name, role, bio, avatar }: TeamMemberProps) => {
 const Team = () => {
   const teamMembers = [
     {
-      name: "Rahul Sharma",
-      role: "Club President",
-      bio: "System administrator with 5+ years experience. Passionate about Linux security and automation.",
+      name: "Prathamesh Pichkate",
+      role: " President",
+      bio: "Full Stack Developer and Linux Enthusiast. Passionate about open source and community building.",
       avatar: "👨‍💻"
     },
     {
-      name: "Priya Patel", 
-      role: "Technical Lead",
-      bio: "Full-stack developer and open source contributor. Loves teaching and mentoring new developers.",
+      name: "Mayuri Shegonkar", 
+      role: "Vice President",
+      bio: "Aspiring software developer with a love for Linux and open source technologies.",
       avatar: "👩‍💼"
     },
     {
-      name: "Amit Kumar",
-      role: "Event Coordinator",
-      bio: "DevOps engineer specializing in containerization and cloud infrastructure.",
-      avatar: "👨‍🔧"
+      name: "Pratik Mahalle",
+      role: "DevOps Lead",
+      bio: "DevOps engineer with a passion for automation, CI/CD, and cloud technologies.",
+      avatar: "🧑‍💻"
     },
     {
-      name: "Sneha Reddy",
-      role: "Community Manager", 
-      bio: "Software engineer passionate about building inclusive tech communities.",
+      name: "Vaishnavi Chavhan",
+      role: "Cyber Security Lead",
+      bio: "Cybersecurity enthusiast with a knack for ethical hacking and network security.",
+      avatar: "👩‍💼"
+    },
+    {
+      name: "Ashwini Adsare",
+      role: "Event Coordinator", 
+      bio: "Organizes engaging events and workshops to foster learning and collaboration.",
       avatar: "👩‍💻"
     },
-    {
-      name: "Vikash Singh",
-      role: "Workshop Instructor",
-      bio: "Linux enthusiast and trainer with expertise in shell scripting and system administration.",
-      avatar: "👨‍🏫"
+     {
+      name: "Vaishnavi Mohite",
+      role: "Co-Event Coordinator", 
+      bio: "Passionate about event management and creating memorable experiences for the community.",
     },
     {
-      name: "Anita Desai",
+      name: "Nikhil Gawade",
+      role: "Video Content Creator",
+      bio: "Creates engaging video content to showcase our events and workshops.",
+      avatar: "🎥"
+    },
+    {
+      name: "Uday Gayakwad",
       role: "Outreach Lead",
       bio: "Tech evangelist focused on promoting open source adoption in local communities.",
       avatar: "👩‍🚀"
+    },
+    {
+      name: "Vedika Jadhav",
+      role: "Social Media Manager",
+      bio: "Manages our social media presence to keep the community informed and engaged.",
+      avatar: "📱"
+    },
+    {
+      name: "Soham Badrike",
+      role: "Designer",
+      bio: "Handles the visual aspects of our organization with creativity and flair.",
+      avatar: "👨‍💼"
+    },
+    {
+      name: "Ganesh Katwate",
+      role: "Marketing Lead",
+      bio: "Develops and implements marketing strategies to promote our events and initiatives.",
+      avatar: "💻"
+    },
+    {
+      name: "Pratik Mahalle",
+      role: "Web Developer",
+      bio: "Passionate about building and maintaining our website to provide a seamless user experience.",
+      avatar: "🌐"
+    },
+    {
+      name: "Gopal Sawant",
+      role: "Java Lead",
+      bio: "Expert in Java development and passionate about building scalable applications.",
+      avatar: "☕"
+    },
+    {
+      name: "Amol Arde",
+      role: "App Development Lead",
+      bio: "Specializes in mobile app development and creating user-friendly applications.",
+      avatar: "📱"
+    },
+    {
+      name: "Tejas Yewale",
+      role: "Data Science Lead",
+      bio: "Data enthusiast with a passion for extracting insights and building predictive models.",
+      avatar: "📊"
     }
   ];
 
