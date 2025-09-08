@@ -31,6 +31,27 @@ const Hero = () => {
             </div>
           ))}
         </div>
+        <div className="flex animate-[scroll_18s_linear_infinite] space-x-6 mt-6">
+          {[...eventImages, ...eventImages, ...eventImages].map((image, index) => (
+            <div key={index} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg">
+              <img src={image} alt="" className="w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
+        <div className="flex animate-[scroll-reverse_22s_linear_infinite] space-x-6 mt-6">
+          {[...eventImages.reverse(), ...eventImages, ...eventImages].map((image, index) => (
+            <div key={index} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg">
+              <img src={image} alt="" className="w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
+        <div className="flex animate-[scroll_24s_linear_infinite] space-x-6 mt-6">
+          {[...eventImages, ...eventImages, ...eventImages].map((image, index) => (
+            <div key={index} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg">
+              <img src={image} alt="" className="w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
       </div>
       
       <div className="text-center max-w-4xl mx-auto relative z-10">
