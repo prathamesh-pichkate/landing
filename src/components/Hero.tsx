@@ -2,12 +2,11 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const eventImages = [
-    "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=150&h=100&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=150&h=100&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=150&h=100&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=150&h=100&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=150&h=100&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=150&h=100&fit=crop&crop=center",
+    "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_747_xvkxfj",
+    "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_718_jujhsv",
+    "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_996_lmrpuw",
+    "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20250127_161743_knfykh",
+    "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_904_m4pnxm",
   ];
 
   return (
