@@ -4,13 +4,13 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      title: "Linux Installation Workshop",
+      title: "DevOps Session",
       image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_747_xvkxfj",
       event: "Weekly Workshop #12"
     },
     {
       id: 2,
-      title: "Command Line Bootcamp",
+      title: "DevOps Session",
       image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_718_jujhsv",
       event: "Weekly Event #8"
     },
@@ -22,13 +22,13 @@ const Gallery = () => {
     },
     {
       id: 4,
-      title: "Linux Club Meetup",
+      title: "Workshop",
       image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20250127_161743_knfykh",
       event: "Monthly Meetup"
     },
     {
       id: 5,
-      title: "Network Security Workshop",
+      title: "DevOps Session",
       image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212556_904_m4pnxm",
       event: "Weekly Event #10"
     },
@@ -52,7 +52,7 @@ const Gallery = () => {
     },
     {
       id: 9,
-      title: "Project Showcase",
+      title: "Onboarding",
       image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20241001_183944_736_dr0qkv",
       event: "Special Showcase"
     }

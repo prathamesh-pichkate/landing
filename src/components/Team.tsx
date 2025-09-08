@@ -33,7 +33,7 @@ const Team = () => {
       avatar: "👨‍💻"
     },
     {
-      name: "Mayuri Shegonkar", 
+      name: "Mayuri Shegokar", 
       role: "Vice President",
       bio: "Aspiring software developer with a love for Linux and open source technologies.",
       avatar: "👩‍💼"
@@ -68,7 +68,7 @@ const Team = () => {
       avatar: "🎥"
     },
     {
-      name: "Uday Gayakwad",
+      name: "Uday Gaikwad",
       role: "Outreach Lead",
       bio: "Tech evangelist focused on promoting open source adoption in local communities.",
       avatar: "👩‍🚀"
@@ -92,12 +92,6 @@ const Team = () => {
       avatar: "💻"
     },
     {
-      name: "Pratik Mahalle",
-      role: "Web Developer",
-      bio: "Passionate about building and maintaining our website to provide a seamless user experience.",
-      avatar: "🌐"
-    },
-    {
       name: "Gopal Sawant",
       role: "Java Lead",
       bio: "Expert in Java development and passionate about building scalable applications.",
@@ -110,7 +104,7 @@ const Team = () => {
       avatar: "📱"
     },
     {
-      name: "Tejas Yewale",
+      name: "Tejes Yewale",
       role: "Data Science Lead",
       bio: "Data enthusiast with a passion for extracting insights and building predictive models.",
       avatar: "📊"
