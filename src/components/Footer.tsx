@@ -1,3 +1,5 @@
+import { Mail } from "lucide-react";
+
 const Footer = () => {
   return (
     <footer className="bg-secondary/10 border-t border-border py-12 px-4">
@@ -14,8 +16,9 @@ const Footer = () => {
               Building the future of open source, one event at a time.
             </p>
             <div className="mt-3">
-              <a href="mailto:linuxclubpune@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                linuxclubpune@gmail.com
+            <a href="mailto:linuxclubpune@gmail.com" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="w-4 h-4" />
+                <span>linuxclubpune@gmail.com</span>
               </a>
             </div>
           </div>
