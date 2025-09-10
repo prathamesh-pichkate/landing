@@ -55,6 +55,18 @@ const Gallery = () => {
       title: "Onboarding",
       image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20241001_183944_736_dr0qkv",
       event: "Special Showcase"
+    },
+    {
+      id: 10,
+      title: "Coding Session",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20241017_170702_cefa3h ",
+      event: "Weekly Workshop #18"
+    },
+    {
+      id: 11,
+      title: "Coding Session",
+      image: "https://res.cloudinary.com/dyqelopiw/image/upload/photo_14_2025-01-24_10-00-10_jc9qo5",
+      event: "Weekly Workshop #18"
     }
   ];
 
