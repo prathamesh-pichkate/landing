@@ -1,6 +1,23 @@
 import { Card } from "@/components/ui/card";
+import { useState, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Gallery = () => {
+  const [hoveredImage, setHoveredImage] = useState<number | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
+  
   const galleryImages = [
     {
       id: 1,
@@ -82,23 +99,99 @@ const Gallery = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image) => (
-            <Card key={image.id} className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="relative">
-                <img
-                  src={image.image}
-                  alt={image.title}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                  <h3 className="font-bold text-lg mb-1">{image.title}</h3>
-                  <p className="text-sm text-gray-300">{image.event}</p>
+        {/* Navigation Controls */}
+        <div className="relative">
+          <button 
+            onClick={scrollLeft}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110 shadow-lg"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button 
+            onClick={scrollRight}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110 shadow-lg"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Horizontal Scrolling Container */}
+          <div 
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 scroll-smooth"
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none'
+            }}
+          >
+            {galleryImages.map((image, index) => (
+              <Card 
+                key={image.id} 
+                className={`group flex-shrink-0 w-80 overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-2xl ${
+                  hoveredImage === image.id ? 'scale-105 z-10' : 'hover:scale-102'
+                }`}
+                onMouseEnter={() => setHoveredImage(image.id)}
+                onMouseLeave={() => setHoveredImage(null)}
+                style={{
+                  animationDelay: `${index * 0.1}s`
+                }}
+              >
+                <div className="relative overflow-hidden rounded-lg">
+                  <img
+                    src={image.image}
+                    alt={image.title}
+                    className="w-full h-96 object-cover transition-all duration-700 group-hover:scale-110"
+                  />
+                  
+                  {/* Post-style overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30 opacity-60 group-hover:opacity-80 transition-all duration-500" />
+                  
+                  {/* Top content like social media */}
+                  <div className="absolute top-4 left-4 right-4 text-white">
+                    <div className="flex items-center gap-3 bg-black/30 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+                      <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold">
+                        LUG
+                      </div>
+                      <span className="font-medium text-sm">Linux Users Group</span>
+                    </div>
+                  </div>
+                  
+                  {/* Bottom content with post-style layout */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <div className="space-y-3">
+                      {/* Like and share buttons */}
+                      <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                          <span className="text-red-400">❤️</span>
+                        </button>
+                        <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                          <span>📤</span>
+                        </button>
+                        <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                          <span>🔖</span>
+                        </button>
+                      </div>
+                      
+                      {/* Post content */}
+                      <div>
+                        <p className="text-sm text-gray-200 mb-2">{image.event}</p>
+                        <div className="flex gap-2 text-xs">
+                          <span className="bg-primary/20 px-2 py-1 rounded-full">#linux</span>
+                          <span className="bg-primary/20 px-2 py-1 rounded-full">#opensource</span>
+                          <span className="bg-primary/20 px-2 py-1 rounded-full">#community</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Animated corner indicator */}
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
+                  </div>
                 </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
         
         <div className="text-center mt-12">
