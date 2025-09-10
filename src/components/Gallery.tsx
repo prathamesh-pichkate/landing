@@ -1,8 +1,22 @@
 import { Card } from "@/components/ui/card";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Gallery = () => {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
   
   const galleryImages = [
     {
@@ -73,54 +87,100 @@ const Gallery = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image, index) => (
-            <Card 
-              key={image.id} 
-              className={`group overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-2xl ${
-                hoveredImage === image.id ? 'scale-110 z-10' : hoveredImage !== null ? 'scale-95 opacity-60' : 'hover:scale-105'
-              }`}
-              onMouseEnter={() => setHoveredImage(image.id)}
-              onMouseLeave={() => setHoveredImage(null)}
-              style={{
-                animationDelay: `${index * 0.1}s`
-              }}
-            >
-              <div className="relative overflow-hidden rounded-lg">
-                <img
-                  src={image.image}
-                  alt={image.title}
-                  className="w-full h-64 object-cover transition-all duration-700 group-hover:scale-125 group-hover:rotate-2"
-                />
-                
-                {/* Animated overlay with gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                
-                {/* Animated border effect */}
-                <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 transition-all duration-300 rounded-lg" />
-                
-                {/* Content with sliding animation */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                  <div className="bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-                    <h3 className="font-bold text-lg mb-2 animate-fade-in">{image.title}</h3>
-                    <p className="text-sm text-gray-200 mb-2 animate-fade-in" style={{animationDelay: '0.1s'}}>{image.event}</p>
-                    <div className="w-full h-0.5 bg-primary rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 delay-200" />
+        {/* Navigation Controls */}
+        <div className="relative">
+          <button 
+            onClick={scrollLeft}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110 shadow-lg"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button 
+            onClick={scrollRight}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110 shadow-lg"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Horizontal Scrolling Container */}
+          <div 
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 scroll-smooth"
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none'
+            }}
+          >
+            {galleryImages.map((image, index) => (
+              <Card 
+                key={image.id} 
+                className={`group flex-shrink-0 w-80 overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-2xl ${
+                  hoveredImage === image.id ? 'scale-105 z-10' : 'hover:scale-102'
+                }`}
+                onMouseEnter={() => setHoveredImage(image.id)}
+                onMouseLeave={() => setHoveredImage(null)}
+                style={{
+                  animationDelay: `${index * 0.1}s`
+                }}
+              >
+                <div className="relative overflow-hidden rounded-lg">
+                  <img
+                    src={image.image}
+                    alt={image.title}
+                    className="w-full h-96 object-cover transition-all duration-700 group-hover:scale-110"
+                  />
+                  
+                  {/* Post-style overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30 opacity-60 group-hover:opacity-80 transition-all duration-500" />
+                  
+                  {/* Top content like social media */}
+                  <div className="absolute top-4 left-4 right-4 text-white">
+                    <div className="flex items-center gap-3 bg-black/30 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+                      <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold">
+                        LUG
+                      </div>
+                      <span className="font-medium text-sm">Linux Users Group</span>
+                    </div>
+                  </div>
+                  
+                  {/* Bottom content with post-style layout */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <div className="space-y-3">
+                      {/* Like and share buttons */}
+                      <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                          <span className="text-red-400">❤️</span>
+                        </button>
+                        <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                          <span>📤</span>
+                        </button>
+                        <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                          <span>🔖</span>
+                        </button>
+                      </div>
+                      
+                      {/* Post content */}
+                      <div>
+                        <h3 className="font-bold text-lg mb-1">{image.title}</h3>
+                        <p className="text-sm text-gray-200 mb-2">{image.event}</p>
+                        <div className="flex gap-2 text-xs">
+                          <span className="bg-primary/20 px-2 py-1 rounded-full">#linux</span>
+                          <span className="bg-primary/20 px-2 py-1 rounded-full">#opensource</span>
+                          <span className="bg-primary/20 px-2 py-1 rounded-full">#community</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Animated corner indicator */}
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
                   </div>
                 </div>
-                
-                {/* Floating particles effect */}
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-ping" />
-                </div>
-                <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full animate-ping" style={{animationDelay: '0.2s'}} />
-                </div>
-                <div className="absolute top-6 right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-600">
-                  <div className="w-1 h-1 bg-secondary rounded-full animate-ping" style={{animationDelay: '0.4s'}} />
-                </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
         
         <div className="text-center mt-12">
