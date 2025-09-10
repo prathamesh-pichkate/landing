@@ -13,6 +13,11 @@ const Footer = () => {
             <p className="text-muted-foreground">
               Building the future of open source, one event at a time.
             </p>
+            <div className="mt-3">
+              <a href="mailto:linuxclubpune@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                linuxclubpune@gmail.com
+              </a>
+            </div>
           </div>
           
           <div>

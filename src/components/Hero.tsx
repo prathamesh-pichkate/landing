@@ -11,7 +11,6 @@ const Hero = () => {
     "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212557_257_qdqcen",
     "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20240807_212557_081_avwpts",
     "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20241001_183944_736_dr0qkv",
-    "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20250719_112313_rp6lz",
     "https://res.cloudinary.com/dyqelopiw/image/upload/photo_14_2025-01-24_10-00-10_jc9qo5",
     "https://res.cloudinary.com/dyqelopiw/image/upload/IMG-20250426-WA0051_eson31",
     "https://res.cloudinary.com/dyqelopiw/image/upload/IMG_20241017_170702_cefa3h", 
