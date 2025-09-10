@@ -4,12 +4,12 @@ interface TeamMemberProps {
   name: string;
   role: string;
   bio: string;
-  avatar: string;
+  avatar?: string;
   github?: string;
   linkedin?: string;
 }
 
-const TeamMember = ({ name, role, bio, avatar }: TeamMemberProps) => {
+const TeamMember = ({ name, role, bio, avatar = "👤" }: TeamMemberProps) => {
   return (
     <Card className="bg-card border-border hover:border-primary/50 transition-colors">
       <CardContent className="p-6 text-center">

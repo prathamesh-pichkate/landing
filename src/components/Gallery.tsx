@@ -1,6 +1,9 @@
 import { Card } from "@/components/ui/card";
+import { useState } from "react";
 
 const Gallery = () => {
+  const [hoveredImage, setHoveredImage] = useState<number | null>(null);
+  
   const galleryImages = [
     {
       id: 1,
@@ -71,18 +74,49 @@ const Gallery = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image) => (
-            <Card key={image.id} className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="relative">
+          {galleryImages.map((image, index) => (
+            <Card 
+              key={image.id} 
+              className={`group overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-2xl ${
+                hoveredImage === image.id ? 'scale-110 z-10' : hoveredImage !== null ? 'scale-95 opacity-60' : 'hover:scale-105'
+              }`}
+              onMouseEnter={() => setHoveredImage(image.id)}
+              onMouseLeave={() => setHoveredImage(null)}
+              style={{
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              <div className="relative overflow-hidden rounded-lg">
                 <img
                   src={image.image}
                   alt={image.title}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-64 object-cover transition-all duration-700 group-hover:scale-125 group-hover:rotate-2"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                  <h3 className="font-bold text-lg mb-1">{image.title}</h3>
-                  <p className="text-sm text-gray-300">{image.event}</p>
+                
+                {/* Animated overlay with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                
+                {/* Animated border effect */}
+                <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 transition-all duration-300 rounded-lg" />
+                
+                {/* Content with sliding animation */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                  <div className="bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/10">
+                    <h3 className="font-bold text-lg mb-2 animate-fade-in">{image.title}</h3>
+                    <p className="text-sm text-gray-200 mb-2 animate-fade-in" style={{animationDelay: '0.1s'}}>{image.event}</p>
+                    <div className="w-full h-0.5 bg-primary rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 delay-200" />
+                  </div>
+                </div>
+                
+                {/* Floating particles effect */}
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-ping" />
+                </div>
+                <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full animate-ping" style={{animationDelay: '0.2s'}} />
+                </div>
+                <div className="absolute top-6 right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-600">
+                  <div className="w-1 h-1 bg-secondary rounded-full animate-ping" style={{animationDelay: '0.4s'}} />
                 </div>
               </div>
             </Card>
