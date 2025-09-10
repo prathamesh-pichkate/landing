@@ -162,7 +162,6 @@ const Gallery = () => {
                       
                       {/* Post content */}
                       <div>
-                        <h3 className="font-bold text-lg mb-1">{image.title}</h3>
                         <p className="text-sm text-gray-200 mb-2">{image.event}</p>
                         <div className="flex gap-2 text-xs">
                           <span className="bg-primary/20 px-2 py-1 rounded-full">#linux</span>
