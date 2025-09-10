@@ -1,27 +1,14 @@
 import EventCard from "./EventCard";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const Events = () => {
   const upcomingEvents = [
     {
-      title: "Linux Command Line Mastery",
-      date: "March 15, 2024",
-      time: "6:00 PM - 8:00 PM",
+      title: "Orientation Session for First-Year Students",
+      date: "September 11, 2025",
+      time: "1:00 PM - 2:30 PM",
       type: "event" as const,
-      description: "Deep dive into essential Linux commands and terminal productivity techniques."
-    },
-    {
-      title: "Open Source Contribution Meetup", 
-      date: "March 22, 2024",
-      time: "5:30 PM - 7:30 PM",
-      type: "meetup" as const,
-      description: "Find your first open source project and make your first contribution with guidance from experienced contributors."
-    },
-    {
-      title: "System Administration Fundamentals",
-      date: "March 29, 2024", 
-      time: "6:00 PM - 8:30 PM",
-      type: "event" as const,
-      description: "Learn essential system administration tasks including user management, file permissions, and process monitoring."
+      description: "Kickstart your journey with the Linux Club. Meet the team, explore activities, and learn how to get involved."
     }
   ];
 
@@ -49,6 +36,71 @@ const Events = () => {
       type: "event" as const,
       description: "Intensive hands-on session covering essential Linux commands and terminal productivity.",
       attendees: 38
+    },
+    // Monthly Meetups 2025
+    {
+      title: "Monthly Meetup — January 2025",
+      date: "January 15, 2025",
+      time: "2:00 PM - 4:00 PM",
+      type: "meetup" as const,
+      description: "Talks, demos, and community networking to kick off the year."
+    },
+    {
+      title: "Monthly Meetup — February 2025",
+      date: "February 12, 2025",
+      time: "2:00 PM - 4:00 PM",
+      type: "meetup" as const,
+      description: "Lightning talks and project show-and-tell from members."
+    },
+    {
+      title: "Monthly Meetup — March 2025",
+      date: "March 12, 2025",
+      time: "2:00 PM - 4:00 PM",
+      type: "meetup" as const,
+      description: "Kernel highlights, CLI tips, and open discussion."
+    },
+    {
+      title: "Monthly Meetup — April 2025",
+      date: "April 16, 2025",
+      time: "2:00 PM - 4:00 PM",
+      type: "meetup" as const,
+      description: "Live demos of tooling and open-source contributions."
+    },
+    {
+      title: "Monthly Meetup — May 2025",
+      date: "May 14, 2025",
+      time: "2:00 PM - 4:00 PM",
+      type: "meetup" as const,
+      description: "Members' project updates and Q&A."
+    },
+    {
+      title: "Monthly Meetup — June 2025",
+      date: "June 11, 2025",
+      time: "2:00 PM - 4:00 PM",
+      type: "meetup" as const,
+      description: "Talks on automation, scripting, and productivity."
+    },
+    {
+      title: "Monthly Meetup — July 2025",
+      date: "July 16, 2025",
+      time: "2:00 PM - 4:00 PM",
+      type: "meetup" as const,
+      description: "Community updates and hands-on micro-workshops."
+    },
+    {
+      title: "Monthly Meetup — August 2025",
+      date: "August 13, 2025",
+      time: "2:00 PM - 4:00 PM",
+      type: "meetup" as const,
+      description: "Showcase night and newcomer onboarding."
+    },
+    // One-month workshop: Condenova
+    {
+      title: "Condenova — One-Month Workshop",
+      date: "June 2025",
+      time: "One-month program",
+      type: "workshop" as const,
+      description: "A comprehensive month-long workshop where we taught students end-to-end fundamentals — from basics to building real projects."
     }
   ];
 
@@ -66,20 +118,36 @@ const Events = () => {
 
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8 text-accent">Upcoming Events</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {upcomingEvents.map((event, index) => (
-              <EventCard key={index} {...event} isUpcoming={true} />
-            ))}
-          </div>
+          <Carousel className="w-full">
+            <CarouselContent>
+              {upcomingEvents.map((event, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <EventCard {...event} isUpcoming={true} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         <div>
           <h3 className="text-2xl font-semibold mb-8 text-muted-foreground">Past Events</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {pastEvents.map((event, index) => (
-              <EventCard key={index} {...event} />
-            ))}
-          </div>
+          <Carousel className="w-full">
+            <CarouselContent>
+              {pastEvents.map((event, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <EventCard {...event} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
     </section>

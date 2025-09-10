@@ -1,20 +1,28 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 interface TeamMemberProps {
   name: string;
   role: string;
   bio: string;
-  avatar: string;
+  avatar?: string;
+  image?: string;
   github?: string;
   linkedin?: string;
 }
 
-const TeamMember = ({ name, role, bio, avatar }: TeamMemberProps) => {
+const TeamMember = ({ name, role, bio, avatar, image }: TeamMemberProps) => {
   return (
-    <Card className="bg-card border-border hover:border-primary/50 transition-colors">
+    <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20">
       <CardContent className="p-6 text-center">
-        <div className="w-20 h-20 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
-          {avatar}
+        <div className="relative inline-block w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          {image ? (
+            <img src={image} alt={name} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+          ) : (
+            <div className="w-full h-full bg-primary/20 flex items-center justify-center text-2xl">
+              {avatar}
+            </div>
+          )}
         </div>
         <h3 className="text-xl font-semibold mb-2">{name}</h3>
         <p className="text-primary font-medium mb-3">{role}</p>
@@ -30,84 +38,91 @@ const Team = () => {
       name: "Prathamesh Pichkate",
       role: " President",
       bio: "Full Stack Developer and Linux Enthusiast. Passionate about open source and community building.",
-      avatar: "👨‍💻"
+      avatar: "👨‍💻",
+      image: "/team/Prathamesh.JPG"
     },
     {
       name: "Mayuri Shegokar", 
       role: "Vice President",
       bio: "Aspiring software developer with a love for Linux and open source technologies.",
-      avatar: "👩‍💼"
+      avatar: "👩‍💼",
+      image: "/team/mayuri.jpeg"
     },
     {
       name: "Pratik Mahalle",
       role: "DevOps Lead",
-      bio: "DevOps engineer with a passion for automation, CI/CD, and cloud technologies.",
-      avatar: "🧑‍💻"
+      bio: " DevRel & DevOps Guy.",
+      avatar: "🧑‍💻",
+      image: "/team/Pratik.jpg"
     },
     {
       name: "Vaishnavi Chavhan",
       role: "Cyber Security Lead",
       bio: "Cybersecurity enthusiast with a knack for ethical hacking and network security.",
-      avatar: "👩‍💼"
+      avatar: "👩‍💼",
+      image: "/team/vaishnvavi.jpeg "
     },
     {
       name: "Ashwini Adsare",
       role: "Event Coordinator", 
       bio: "Organizes engaging events and workshops to foster learning and collaboration.",
-      avatar: "👩‍💻"
+      avatar: "👩‍💻",
+      image: "/team/ashwini.jpeg"
     },
      {
       name: "Vaishnavi Mohite",
       role: "Co-Event Coordinator", 
       bio: "Passionate about event management and creating memorable experiences for the community.",
-    },
-    {
-      name: "Nikhil Gawade",
-      role: "Content Creator",
-      bio: "Creates engaging video content to showcase our events and workshops.",
-      avatar: "🎥"
-    },
-    {
-      name: "Uday Gaikwad",
-      role: "Outreach Lead",
-      bio: "Tech evangelist focused on promoting open source adoption in local communities.",
-      avatar: "👩‍🚀"
-    },
-    {
-      name: "Vedika Jadhav",
-      role: "Social Media Manager",
-      bio: "Manages our social media presence to keep the community informed and engaged.",
-      avatar: "📱"
-    },
-    {
-      name: "Soham Badrike",
-      role: "Designer",
-      bio: "Handles the visual aspects of our organization with creativity and flair.",
-      avatar: "👨‍💼"
-    },
-    {
-      name: "Ganesh Katwate",
-      role: "Marketing Lead",
-      bio: "Develops and implements marketing strategies to promote our events and initiatives.",
-      avatar: "💻"
+      image: "/team/mohite.jpeg"
     },
     {
       name: "Gopal Sawant",
       role: "Java Lead",
       bio: "Expert in Java development and passionate about building scalable applications.",
-      avatar: "☕"
+      avatar: "☕",
+      image: "/team/gopal.jpg"
+    },
+    {
+      name: "Nikhil Gawade",
+      role: "Content Creator",
+      bio: "Creates engaging video content to showcase our events and workshops.",
+      avatar: "🎥",
+      image: "/team/Nikhil.jpeg"
+    },
+    {
+      name: "Vedika Jadhav",
+      role: "Social Media Manager",
+      bio: "Manages our social media presence to keep the community informed and engaged.",
+      avatar: "📱",
+      image: "/team/vedika.jpeg"
+    },
+    {
+      name: "Uday Gaikwad",
+      role: "Outreach Lead",
+      bio: "Tech evangelist focused on promoting open source adoption in local communities.",
+      avatar: "👩‍🚀",
+      image: "/team/uday1.JPG"
+    },
+    {
+      name: "Soham Badrike",
+      role: "Designer",
+      bio: "Handles the visual aspects of our organization with creativity and flair.",
+      avatar: "👨‍💼",
+      image: "/team/soham.jpeg"
+    },
+    {
+      name: "Ganesh Katwate",
+      role: "Marketing Lead",
+      bio: "Develops and implements marketing strategies to promote our events and initiatives.",
+      avatar: "💻",
+      image: "/team/ganesh.jpeg"
     },
     {
       name: "Amol Arde",
       role: "App Development Lead",
       bio: "Specializes in mobile app development and creating user-friendly applications.",
-      avatar: "📱"
-    },
-    {
-      name: "Tejes Yewale",
-      role: "Data Science Lead",
-      bio: "Data enthusiast with a passion for extracting insights and building predictive models.",
-      avatar: "📊"
+      avatar: "📱",
+      image: "/team/amol.jpg"
     }
   ];
 
@@ -124,11 +139,19 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {teamMembers.map((member, index) => (
-            <TeamMember key={index} {...member} />
-          ))}
-        </div>
+        <Carousel className="w-full">
+          <CarouselContent>
+            {teamMembers.map((member, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                  <TeamMember {...member} />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
 
         <div className="text-center mt-12">
           <div className="bg-card border border-border rounded-lg p-8 max-w-2xl mx-auto">

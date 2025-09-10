@@ -20,7 +20,7 @@ const EventCard = ({ title, date, time, type, description, isUpcoming = false, a
   };
 
   return (
-    <Card className="bg-card border-border hover:border-primary/50 transition-colors">
+    <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 group transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20">
       <CardHeader>
         <div className="flex justify-between items-start mb-2">
           <Badge className={typeColors[type]}>{type}</Badge>
