@@ -106,7 +106,7 @@ const Events = () => {
 
   return (
     <section id="events" className="py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl xl:max-w-[90rem] 2xl:max-w-[100rem]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-primary">Events</span> & Meetups
@@ -121,7 +121,7 @@ const Events = () => {
           <Carousel className="w-full">
             <CarouselContent>
               {upcomingEvents.map((event, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5">
                   <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                     <EventCard {...event} isUpcoming={true} />
                   </div>
@@ -138,7 +138,7 @@ const Events = () => {
           <Carousel className="w-full">
             <CarouselContent>
               {pastEvents.map((event, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5">
                   <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                     <EventCard {...event} />
                   </div>
