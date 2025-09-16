@@ -4,15 +4,23 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const Events = () => {
   const upcomingEvents = [
     {
+      title: "Rise With AI",
+      date: "September 18, 2025",
+      time: "3:00 PM - 4 PM",
+      type: "event" as const,
+      venue: "Auditorium Hall",
+      description: "Join us for a session on how to use AI to build your own Career."
+    }
+  ];
+
+  const pastEvents = [
+    {
       title: "Orientation Session for First-Year Students",
       date: "September 11, 2025",
       time: "1:00 PM - 2:30 PM",
       type: "event" as const,
       description: "Kickstart your journey with the Linux Club. Meet the team, explore activities, and learn how to get involved."
-    }
-  ];
-
-  const pastEvents = [
+    },
     {
       title: "Docker Containerization Session",
       date: "March 8, 2024",
