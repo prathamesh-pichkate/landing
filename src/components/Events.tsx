@@ -27,12 +27,22 @@ const Events = () => {
 
   const pastEvents = [
     {
+      title: "Rise With AI",
+      date: "September 18, 2025",
+      time: "3:00 PM - 4 PM",
+      type: "event" as const,
+      venue: "Auditorium Hall",
+      description: "Join us for a session on how to use AI to build your own Career."
+    }
+  ];
+
+  const pastEvents = [
+    {
       title: "Orientation Session for First-Year Students",
       date: "September 11, 2025",
       time: "1:00 PM - 2:30 PM",
       type: "event" as const,
-      description:
-        "Kickstart your journey with the Linux Club. Meet the team, explore activities, and learn how to get involved.",
+      description: "Kickstart your journey with the Linux Club. Meet the team, explore activities, and learn how to get involved."
     },
     {
       title: "Docker Containerization Session",
@@ -132,7 +142,7 @@ const Events = () => {
 
   return (
     <section id="events" className="py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl xl:max-w-[90rem] 2xl:max-w-[100rem]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-primary">Events</span> & Meetups
@@ -149,7 +159,7 @@ const Events = () => {
           <Carousel className="w-full">
             <CarouselContent>
               {upcomingEvents.map((event, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5">
                   <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                     <EventCard {...event} isUpcoming={true} />
                   </div>
@@ -168,7 +178,7 @@ const Events = () => {
           <Carousel className="w-full">
             <CarouselContent>
               {pastEvents.map((event, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5">
                   <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                     <EventCard {...event} />
                   </div>
